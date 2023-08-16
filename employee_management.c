@@ -14,7 +14,12 @@ void addEmployee()
 {
     struct Employee new_employee;
     printf("Enter Employee ID: ");
-    scanf("%d", &new_employee.Employee_ID);
+   if(scanf("%d", &new_employee.Employee_ID) != 1){
+    printf("Invalid Input\n");
+    while(getchar()!='\n')
+    return;
+
+   }
     printf("Enter Employee Name: ");
     scanf("%s", new_employee.Employee_Name);
     printf("Enter Employee Salary: ");
